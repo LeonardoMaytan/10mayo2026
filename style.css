@@ -66,6 +66,7 @@ h1 {
   max-width: 600px;
   margin: 20px auto;
   padding: 0 10px;
+  justify-items: center;
 }
 
 .galeria img {
@@ -73,25 +74,17 @@ h1 {
   max-width: 120px;
   height: 100px;
   object-fit: contain;
-  background: white;
+  background: rgba(255,255,255,0.9);
   padding: 8px;
   border-radius: 15px;
   margin: auto;
-}
-
-@media (max-width: 600px) {
-  .galeria {
-    gap: 15px;
-  }
-
-  .galeria img {
-    max-width: 90px;
-    height: 90px;
-  }
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .galeria img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 /* CARTA */
@@ -145,6 +138,7 @@ canvas {
   .galeria {
     grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
     gap: 15px;
+    justify-items: center; /* centra mejor cada imagen */
   }
 
   .galeria img {
