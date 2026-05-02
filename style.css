@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(270deg, #f1818e, #df344b);
+  background-size: 400% 400%;
+  animation: fondo 10s ease infinite;
+  text-align: center;
+}
+
+@keyframes fondo {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* HEADER */
+header {
+  padding: 15px 10px;
+}
+
+h1 {
+  margin: 5px 0;
+  animation: aparecer 2s ease-in-out;
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mensaje {
+  margin: 5px 0 10px;
+}
+
+/* FOTO PRINCIPAL */
+.principal {
+  margin: 10px 0;
+}
+
+.principal img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: latido 2s infinite;
+}
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+/* GALERIA PERFECTA */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  max-width: 500px;
+  margin: 20px auto;
+  gap: 20px;
+  justify-items: center;
+}
+
+.galeria img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  background: white;
+  padding: 10px; /* 👈 más espacio interno */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* CARTA */
+.carta {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 350px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  animation: aparecer 2s ease-in-out;
+}
+
+/* BOTON */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #ff6f91, #ff9671);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* VIDEO */
+.video {
+  margin: 30px 0;
+}
+
+.video video {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+}
+
+/* EFECTO */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+
+  .galeria {
+    grid-template-columns: repeat(2, 100px);
+  }
+
+  .galeria img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .principal img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .video video {
+    width: 95%;
+  }
+
+  .carta {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+@keyframes flotar {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-50px); opacity: 0; }
+}
+
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+.visor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.visor img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+}

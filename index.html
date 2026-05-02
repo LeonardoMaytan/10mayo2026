@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Día Mamá ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🌸 Feliz Día Mamá 🌸</h1>
+  <p class="mensaje">Gracias por tu amor infinito ❤️</p>
+</header>
+
+<!-- FOTO PRINCIPAL (AHORA ES SEGUNDO) -->
+<section class="principal">
+  <img src="img/mama7.png">
+</section>
+
+<!-- GALERIA -->
+<section class="galeria">
+  <img src="img/mama1.png">
+  <img src="img/mama2.png">
+  <img src="img/mama3.png">
+  <img src="img/mama4.png">
+  <img src="img/mama5.png">
+  <img src="img/mama6.png">
+</section>
+
+<!-- CARTA -->
+<div class="carta">
+  <h2>💌 Carta para Mamá</h2>
+  <p id="textoCarta">Mamá, eres mi inspiración cada día...</p>
+  <button onclick="cambiarMensaje()">Ver otro mensaje</button>
+</div>
+
+<!-- VIDEO AL FINAL -->
+<section class="video">
+  <video controls>
+    <source src="video/video.mp4" type="video/mp4">
+  </video>
+</section>
+<div id="visor" class="visor">
+  <img id="imgGrande">
+</div>
+<audio id="musica" loop>
+  <source src="musica/musica.mp3" type="audio/mp3">
+</audio>
+
+<button onclick="toggleMusica()">🎵 Música</button>
+
+<canvas id="lluvia"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
